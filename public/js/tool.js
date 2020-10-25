@@ -16,9 +16,14 @@ ctx.imageSmoothingQuality = "high";
 ctx.lineWidth = 3;
 
 
-const clearall=document.querySelector(".clear-all");
 
-clearall.addEventListener("click",function(e){
+
+
+
+
+const clearall = document.querySelector(".clear-all");
+
+clearall.addEventListener("click", function (e) {
 
   const board = document.querySelector(".board");
   board.height = window.innerHeight;
@@ -39,6 +44,9 @@ function sizeChange(value) {
   socket.emit("size", value);
 }
 
+
+
+
 // **tool Change***************************************************//
 function handleLocaltoolChange(tool) {
   handleToolChange(tool);
@@ -53,8 +61,8 @@ function handleColorChange(color) {
 
 const hamburger = document.querySelector(".hamburger");
 const toolPanel = document.querySelector(".tool-panel");
-hamburger.addEventListener("click", function() {
-   handleHamburger() 
+hamburger.addEventListener("click", function () {
+  handleHamburger()
 
   socket.emit("hamburger");
 });
