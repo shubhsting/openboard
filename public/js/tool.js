@@ -15,6 +15,24 @@ ctx.miterLimit = 1;
 ctx.imageSmoothingQuality = "high";
 ctx.lineWidth = 3;
 
+
+const clearall=document.querySelector(".clear-all");
+
+clearall.addEventListener("click",function(e){
+
+  const board = document.querySelector(".board");
+  board.height = window.innerHeight;
+  board.width = window.innerWidth;
+  // canvasRenderingContext2d=> tool
+  const ctx = board.getContext("2d");
+  ctx.strokeStyle = "blue";
+  ctx.imageSmoothingEnabled = true;
+  ctx.lineJoin = "round";
+  ctx.lineCap = "round";
+  ctx.miterLimit = 1;
+  ctx.imageSmoothingQuality = "high";
+  ctx.lineWidth = 3;
+})
 // ************************Change Size**************************//
 function sizeChange(value) {
   ctx.lineWidth = value;
